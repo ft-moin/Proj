@@ -1,0 +1,3 @@
+#!/bin/sh
+# Maven wrapper launcher placeholder. On Windows use mvnw.cmd.
+exec mvn "$@"

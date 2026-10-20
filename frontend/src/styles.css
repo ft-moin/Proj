@@ -1,0 +1,313 @@
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 10px;
+}
+
+.topbar nav button {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px 12px;
+  color: #333;
+}
+
+.topbar nav button:hover {
+  background: #ddd;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.hero {
+  padding: 60px 0;
+  max-width: 750px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+
+.hero h1,
+.panel h1 {
+  font-size: 36px;
+  margin: 18px 0;
+}
+
+.hero h1 span {
+  color: #555;
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.primary {
+  border: 1px solid #333;
+  background: #333;
+  color: white;
+  padding: 11px 18px;
+}
+
+.primary:hover {
+  background: #555;
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.feature,
+.panel,
+.stats article {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: #eee;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin: 15px 0 8px;
+}
+
+.feature p,
+.muted {
+  color: #666;
+  line-height: 1.6;
+}
+
+.panel {
+  margin: 40px auto;
+  max-width: 850px;
+}
+
+.panel h1 {
+  font-size: 30px;
+}
+
+.form-panel form {
+  display: grid;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.narrow {
+  max-width: 530px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 10px;
+  background: white;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  border: none;
+  background: none;
+  color: #aaa;
+  font-size: 28px;
+  padding: 0 3px;
+}
+
+.star.active {
+  color: orange;
+}
+
+.error {
+  color: #b00020;
+  background: #fceaea;
+  padding: 12px;
+}
+
+.notice {
+  color: #665500;
+  background: #fff8d6;
+  padding: 12px;
+  line-height: 1.5;
+}
+
+.center {
+  text-align: center;
+  max-width: 650px;
+  padding: 50px 20px;
+}
+
+.center h1 {
+  font-size: 30px;
+}
+
+.success-icon {
+  margin: auto;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ccc;
+  font-size: 28px;
+}
+
+.reference {
+  background: #eee;
+  padding: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stats article {
+  display: grid;
+  gap: 10px;
+}
+
+.stats span {
+  color: #666;
+  font-size: 13px;
+}
+
+.stats strong {
+  font-size: 26px;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  padding: 22px;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  background: #eee;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    padding: 15px;
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .topbar nav {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .feature-grid,
+  .form-row,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    margin: 25px auto;
+    padding: 18px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}

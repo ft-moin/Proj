@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS college_feedback
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE college_feedback;
+
+CREATE TABLE IF NOT EXISTS feedback (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  student_name VARCHAR(100) NOT NULL,
+  student_email VARCHAR(200) NOT NULL,
+  department VARCHAR(100) NOT NULL,
+  category VARCHAR(80) NOT NULL,
+  rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  comments VARCHAR(3000) NOT NULL,
+  reference_id VARCHAR(20) NOT NULL UNIQUE,
+  created_at DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS admins (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  email VARCHAR(200) NOT NULL UNIQUE,
+  password_hash VARCHAR(100) NOT NULL
+);
